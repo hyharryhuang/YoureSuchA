@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C13B0991A44ADC2007C86E0 /* instructions.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7C13B0981A44ADC2007C86E0 /* instructions.mov */; };
 		7C3A82531A43716D00F2CDE8 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A82521A43716D00F2CDE8 /* KeyboardViewController.swift */; };
 		7C3A82561A43716D00F2CDE8 /* YoureSuchAKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7C3A824E1A43716D00F2CDE8 /* YoureSuchAKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C3A825D1A43719C00F2CDE8 /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7C3A825C1A43719C00F2CDE8 /* nouns.txt */; };
@@ -23,7 +24,6 @@
 		7CF5E5511A4370AA00BA6A9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E5501A4370AA00BA6A9A /* ViewController.swift */; };
 		7CF5E5541A4370AA00BA6A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5E5521A4370AA00BA6A9A /* Main.storyboard */; };
 		7CF5E5561A4370AA00BA6A9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5E5551A4370AA00BA6A9A /* Images.xcassets */; };
-		7CF5E5591A4370AA00BA6A9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5E5571A4370AA00BA6A9A /* LaunchScreen.xib */; };
 		7CF5E5651A4370AA00BA6A9A /* YoureSuchATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E5641A4370AA00BA6A9A /* YoureSuchATests.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C13B0981A44ADC2007C86E0 /* instructions.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = instructions.mov; sourceTree = "<group>"; };
 		7C3A824E1A43716D00F2CDE8 /* YoureSuchAKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YoureSuchAKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3A82511A43716D00F2CDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3A82521A43716D00F2CDE8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		7CF5E5501A4370AA00BA6A9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CF5E5531A4370AA00BA6A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CF5E5551A4370AA00BA6A9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7CF5E5581A4370AA00BA6A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7CF5E55E1A4370AA00BA6A9A /* YoureSuchATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoureSuchATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF5E5631A4370AA00BA6A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CF5E5641A4370AA00BA6A9A /* YoureSuchATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoureSuchATests.swift; sourceTree = "<group>"; };
@@ -142,6 +142,7 @@
 		7C3A82681A44448400F2CDE8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C13B0981A44ADC2007C86E0 /* instructions.mov */,
 				7C3A82731A44451400F2CDE8 /* Icon180.png */,
 				7C3A82691A4444C100F2CDE8 /* Icon58.png */,
 				7C3A826A1A4444C100F2CDE8 /* Icon80.png */,
@@ -179,7 +180,6 @@
 				7CF5E5501A4370AA00BA6A9A /* ViewController.swift */,
 				7CF5E5521A4370AA00BA6A9A /* Main.storyboard */,
 				7CF5E5551A4370AA00BA6A9A /* Images.xcassets */,
-				7CF5E5571A4370AA00BA6A9A /* LaunchScreen.xib */,
 				7CF5E54C1A4370AA00BA6A9A /* Supporting Files */,
 			);
 			path = YoureSuchA;
@@ -324,9 +324,9 @@
 				7C3A82741A44451400F2CDE8 /* Icon180.png in Resources */,
 				7C3A82711A4444C100F2CDE8 /* Icon120.png in Resources */,
 				7CF5E5541A4370AA00BA6A9A /* Main.storyboard in Resources */,
-				7CF5E5591A4370AA00BA6A9A /* LaunchScreen.xib in Resources */,
 				7CF5E5561A4370AA00BA6A9A /* Images.xcassets in Resources */,
 				7C3A826F1A4444C100F2CDE8 /* Icon80.png in Resources */,
+				7C13B0991A44ADC2007C86E0 /* instructions.mov in Resources */,
 				7C3A826E1A4444C100F2CDE8 /* Icon58.png in Resources */,
 				7C3A82701A4444C100F2CDE8 /* Icon87.png in Resources */,
 			);
@@ -393,14 +393,6 @@
 				7CF5E5531A4370AA00BA6A9A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7CF5E5571A4370AA00BA6A9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7CF5E5581A4370AA00BA6A9A /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -573,6 +565,7 @@
 				7C3A82581A43716D00F2CDE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CF5E5441A4370AA00BA6A9A /* Build configuration list for PBXProject "YoureSuchA" */ = {
 			isa = XCConfigurationList;
