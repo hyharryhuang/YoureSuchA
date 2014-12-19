@@ -86,7 +86,7 @@ class KeyboardViewController: UIInputViewController, BottomBarDelegate {
             
             self.view.addConstraint(NSLayoutConstraint(item: self.youreAButton, attribute: .Leading, relatedBy: .Equal, toItem: self.view, attribute: .Leading, multiplier: 1.0, constant: 0))
             
-            self.view.addConstraint(NSLayoutConstraint(item: self.youreAButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -30))
+            self.view.addConstraint(NSLayoutConstraint(item: self.youreAButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -50))
             
             self.view.addConstraint(NSLayoutConstraint(item: self.youreAButton, attribute: .Trailing, relatedBy: .Equal, toItem: self.view, attribute: .Trailing, multiplier: 1.0, constant: 0))
             
@@ -100,7 +100,7 @@ class KeyboardViewController: UIInputViewController, BottomBarDelegate {
             self.bottomBar.setUpButtons()
             self.view.addSubview(self.bottomBar)
             
-            self.view.addConstraint(NSLayoutConstraint(item: self.bottomBar, attribute: NSLayoutAttribute.Height, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 30))
+            self.view.addConstraint(NSLayoutConstraint(item: self.bottomBar, attribute: NSLayoutAttribute.Height, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 50))
             
             self.view.addConstraint(NSLayoutConstraint(item: self.bottomBar, attribute: .Leading, relatedBy: .Equal, toItem: self.view, attribute: .Leading, multiplier: 1.0, constant: 0.0))
             
