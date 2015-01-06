@@ -30,6 +30,7 @@
 		7CF5E5541A4370AA00BA6A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5E5521A4370AA00BA6A9A /* Main.storyboard */; };
 		7CF5E5561A4370AA00BA6A9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5E5551A4370AA00BA6A9A /* Images.xcassets */; };
 		7CF5E5651A4370AA00BA6A9A /* YoureSuchATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E5641A4370AA00BA6A9A /* YoureSuchATests.swift */; };
+		7CF897501A5C307200CB2F58 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8974F1A5C307200CB2F58 /* NumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		7CF5E55E1A4370AA00BA6A9A /* YoureSuchATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoureSuchATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF5E5631A4370AA00BA6A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CF5E5641A4370AA00BA6A9A /* YoureSuchATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoureSuchATests.swift; sourceTree = "<group>"; };
+		7CF8974F1A5C307200CB2F58 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				7C3A82521A43716D00F2CDE8 /* KeyboardViewController.swift */,
 				7C3A82501A43716D00F2CDE8 /* Supporting Files */,
 				7C3A82661A442DA300F2CDE8 /* BottomBar.swift */,
+				7CF8974F1A5C307200CB2F58 /* NumberView.swift */,
 			);
 			path = YoureSuchAKeyboard;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				7C3A82531A43716D00F2CDE8 /* KeyboardViewController.swift in Sources */,
 				7C3A82611A43723A00F2CDE8 /* Helper.swift in Sources */,
 				7C3A82621A43723A00F2CDE8 /* Constants.swift in Sources */,
+				7CF897501A5C307200CB2F58 /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

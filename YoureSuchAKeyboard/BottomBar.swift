@@ -14,16 +14,17 @@ protocol BottomBarDelegate : class
     func switchKeyboardPressed()
     func backspaceDown()
     func backspaceUp()
+    func toggleNumberView()
 }
 
 class BottomBar : UIView
 {
-    let numberOfButtons = 2
+    let numberOfButtons = 3
     let buttonBaseTag:Int = 100
     
     weak var delegate:BottomBarDelegate?
     
-    let titles:[String] = ["Switch Keyboard", "Backspace"]
+    let titles:[String] = ["Switch", "123", "Backspace"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,7 +36,7 @@ class BottomBar : UIView
         {
             var button:UIButton = UIButton()
 
-            if(index == 1)
+            if(index == numberOfButtons - 1)
             {
                 let cancelEvents: UIControlEvents = UIControlEvents.TouchUpInside|UIControlEvents.TouchUpInside|UIControlEvents.TouchDragExit|UIControlEvents.TouchUpOutside|UIControlEvents.TouchCancel|UIControlEvents.TouchDragOutside
                 
@@ -48,6 +49,7 @@ class BottomBar : UIView
             }
             button.tag = buttonBaseTag + index
             button.setTitle(self.titles[index], forState: UIControlState.Normal)
+            button.titleLabel?.textAlignment = NSTextAlignment.Center
             
             self.addSubview(button)
         }
@@ -74,10 +76,27 @@ class BottomBar : UIView
         switch actualButtonTag {
         case 0:
             self.delegate?.switchKeyboardPressed()
+        case 1:
+                self.delegate?.toggleNumberView()
+                flipNumberButtonTitle()
         default:
             break
         }
     }
+    
+    func flipNumberButtonTitle()
+    {
+        var button = self.viewWithTag(buttonBaseTag + 1) as? UIButton
+        
+        if(button?.titleLabel?.text == "123")
+        {
+            button?.setTitle("YSA", forState: UIControlState.Normal)
+        } else
+        {
+            button?.setTitle("123", forState: UIControlState.Normal)
+        }
+    }
+
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

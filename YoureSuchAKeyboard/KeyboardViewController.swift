@@ -8,11 +8,12 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController, BottomBarDelegate {
+class KeyboardViewController: UIInputViewController, BottomBarDelegate, NumberViewDelegate {
     
     
     var nouns:[String] = []
     var bottomBar:BottomBar!
+    var numberView:NumberView!
     var youreAButton:UIButton!
     
     let vowels = ["a", "e", "i", "o", "u"]
@@ -93,6 +94,24 @@ class KeyboardViewController: UIInputViewController, BottomBarDelegate {
             self.youreAButton.titleLabel!.font = UIFont(name: "Helvetica", size: 30)
             self.youreAButton.backgroundColor = Helper.getRandomColor()
             
+            //Number view
+            self.numberView = NumberView(frame: CGRectZero)
+            self.numberView.setTranslatesAutoresizingMaskIntoConstraints(false)
+            self.numberView.delegate = self
+            self.numberView.setUpButtons()
+            self.numberView.alpha = 0
+            self.view.addSubview(self.numberView)
+            
+            self.view.addConstraint(NSLayoutConstraint(item: self.numberView, attribute: .Top, relatedBy: .Equal, toItem: self.youreAButton, attribute: .Top, multiplier: 1.0, constant: 0.0))
+            
+            self.view.addConstraint(NSLayoutConstraint(item: self.numberView, attribute: .Leading, relatedBy: .Equal, toItem: self.youreAButton, attribute: .Leading, multiplier: 1.0, constant: 0.0))
+            
+            self.view.addConstraint(NSLayoutConstraint(item: self.numberView, attribute: .Bottom, relatedBy: .Equal, toItem: self.youreAButton, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
+            
+            self.view.addConstraint(NSLayoutConstraint(item: self.numberView, attribute: .Trailing, relatedBy: .Equal, toItem: self.youreAButton, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
+            
+            viewsSetUp = true
+            
             //Bottom bar
             self.bottomBar = BottomBar(frame: CGRectZero)
             self.bottomBar.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -117,6 +136,7 @@ class KeyboardViewController: UIInputViewController, BottomBarDelegate {
         if(viewsSetUp)
         {
             self.bottomBar.setUpButtonFrames()
+            self.numberView.setUpButtonFrames()
         }
     }
     
@@ -187,6 +207,20 @@ class KeyboardViewController: UIInputViewController, BottomBarDelegate {
         
         if let textDocumentProxy = self.textDocumentProxy as? UIKeyInput {
             textDocumentProxy.deleteBackward()
+        }
+    }
+    
+    func toggleNumberView() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.numberView.alpha = self.numberView.alpha == 1 ? 0 : 1
+            self.youreAButton.alpha = self.numberView.alpha == 1 ? 0 : 1
+        })
+    }
+    
+    //NumberViewDelegate
+    func numberPressed(number: String?) {
+        if let numberStr = number? {
+            insertText(numberStr)
         }
     }
 }
